@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_yellow_taxi_trips
+    description: "Cleaned staging model for NYC yellow taxi trips."
+
+    columns:
+      - name: pickup_datetime
+        tests:
+          - not_null
+
+      - name: dropoff_datetime
+        tests:
+          - not_null
+
+      - name: trip_distance
+        tests:
+          - not_null
+
+      - name: total_amount
+        tests:
+          - not_null
