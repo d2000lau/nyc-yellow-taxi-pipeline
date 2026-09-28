@@ -2646,3 +2646,1177 @@ having count(*) > 1
 [0m23:37:43.631645 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10daf5fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f1fa570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f1fba10>]}
 [0m23:37:43.631830 [debug] [MainThread]: Flushing usage events
 [0m23:37:44.104268 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:04:34.182399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa568f770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa4c5b560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa568deb0>]}
+
+
+============================== 16:04:34.186251 | df0218ef-9f17-464f-bece-d6bf0b9c10d1 ==============================
+[0m16:04:34.186251 [info ] [MainThread]: Running with dbt=1.12.5
+[0m16:04:34.186537 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'quiet': 'False', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'profiles_dir': '.', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'maximum_seed_size_mib': '1', 'debug': 'False', 'hints_enabled': 'True', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'use_colors': 'True', 'printer_width': '80', 'invocation_command': 'dbt run --profiles-dir .', 'fail_fast': 'False', 'log_format': 'default', 'no_print': 'None', 'write_json': 'True', 'indirect_selection': 'eager', 'log_path': '/opt/airflow/project/dbt/logs', 'static_parser': 'True', 'introspect': 'True'}
+[0m16:04:34.286169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'df0218ef-9f17-464f-bece-d6bf0b9c10d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa49308c0>]}
+[0m16:04:34.309068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'df0218ef-9f17-464f-bece-d6bf0b9c10d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa3d40890>]}
+[0m16:04:34.309584 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m16:04:34.341824 [debug] [MainThread]: checksum: 922d4ebfcdefe29b73e69bf4f56c7e20c3b4e11b50e2bdf2ddd2928c206551e5, vars: {}, profile: nyc_taxi, target: dev, version: 1.12.5
+[0m16:04:34.387355 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m16:04:34.387667 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'df0218ef-9f17-464f-bece-d6bf0b9c10d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa3abdd60>]}
+[0m16:04:34.914341 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'df0218ef-9f17-464f-bece-d6bf0b9c10d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa2332120>]}
+[0m16:04:34.955291 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/project/dbt/target/manifest.json
+[0m16:04:34.956705 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/project/dbt/target/semantic_manifest.json
+[0m16:04:34.965921 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/project/dbt/target/osi_document.json
+[0m16:04:34.974224 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'df0218ef-9f17-464f-bece-d6bf0b9c10d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa20c4da0>]}
+[0m16:04:34.974431 [info ] [MainThread]: Found 3 models, 15 data tests, 477 macros
+[0m16:04:34.974602 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'df0218ef-9f17-464f-bece-d6bf0b9c10d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa212ee70>]}
+[0m16:04:34.975450 [info ] [MainThread]: 
+[0m16:04:34.975615 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:04:34.975738 [info ] [MainThread]: 
+[0m16:04:34.975963 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m16:04:34.977755 [debug] [ThreadPool]: Acquiring new postgres connection 'list_taxi'
+[0m16:04:34.981626 [debug] [ThreadPool]: Acquiring new postgres connection 'list_taxi'
+[0m16:04:34.992502 [debug] [ThreadPool]: Using postgres connection "list_taxi"
+[0m16:04:34.992673 [debug] [ThreadPool]: Using postgres connection "list_taxi"
+[0m16:04:34.992823 [debug] [ThreadPool]: On list_taxi: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "connection_name": "list_taxi"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:04:34.993022 [debug] [ThreadPool]: On list_taxi: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "connection_name": "list_taxi"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:04:34.993172 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:04:34.993314 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:04:34.999335 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.006 seconds
+[0m16:04:34.999507 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.006 seconds
+[0m16:04:35.000032 [debug] [ThreadPool]: On list_taxi: Close
+[0m16:04:35.000542 [debug] [ThreadPool]: On list_taxi: Close
+[0m16:04:35.001120 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_taxi, now create_taxi_analytics_analytics)
+[0m16:04:35.001377 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_taxi, now create_taxi_analytics_staging)
+[0m16:04:35.001610 [debug] [ThreadPool]: Creating schema "database: "taxi"
+schema: "analytics_analytics"
+"
+[0m16:04:35.001854 [debug] [ThreadPool]: Creating schema "database: "taxi"
+schema: "analytics_staging"
+"
+[0m16:04:35.003595 [debug] [ThreadPool]: Using postgres connection "create_taxi_analytics_analytics"
+[0m16:04:35.004206 [debug] [ThreadPool]: Using postgres connection "create_taxi_analytics_staging"
+[0m16:04:35.004369 [debug] [ThreadPool]: On create_taxi_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "connection_name": "create_taxi_analytics_analytics"} */
+create schema if not exists "analytics_analytics"
+[0m16:04:35.004534 [debug] [ThreadPool]: On create_taxi_analytics_staging: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "connection_name": "create_taxi_analytics_staging"} */
+create schema if not exists "analytics_staging"
+[0m16:04:35.004670 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:04:35.004801 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:04:35.008509 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.004 seconds
+[0m16:04:35.008656 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.004 seconds
+[0m16:04:35.009078 [debug] [ThreadPool]: On create_taxi_analytics_staging: COMMIT
+[0m16:04:35.009444 [debug] [ThreadPool]: On create_taxi_analytics_analytics: COMMIT
+[0m16:04:35.009601 [debug] [ThreadPool]: Using postgres connection "create_taxi_analytics_staging"
+[0m16:04:35.009750 [debug] [ThreadPool]: Using postgres connection "create_taxi_analytics_analytics"
+[0m16:04:35.009895 [debug] [ThreadPool]: On create_taxi_analytics_staging: COMMIT
+[0m16:04:35.010020 [debug] [ThreadPool]: On create_taxi_analytics_analytics: COMMIT
+[0m16:04:35.010393 [debug] [ThreadPool]: SQL status: COMMIT in 0.000 seconds
+[0m16:04:35.010540 [debug] [ThreadPool]: SQL status: COMMIT in 0.000 seconds
+[0m16:04:35.010667 [debug] [ThreadPool]: On create_taxi_analytics_staging: Close
+[0m16:04:35.010811 [debug] [ThreadPool]: On create_taxi_analytics_analytics: Close
+[0m16:04:35.011608 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_taxi_analytics_analytics, now list_taxi_analytics_analytics)
+[0m16:04:35.013582 [debug] [ThreadPool]: Using postgres connection "list_taxi_analytics_analytics"
+[0m16:04:35.013759 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_taxi_analytics_staging, now list_taxi_analytics_staging)
+[0m16:04:35.013923 [debug] [ThreadPool]: On list_taxi_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "connection_name": "list_taxi_analytics_analytics"} */
+select
+      'taxi' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'taxi' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'taxi' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select distinct
+     'taxi' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'analytics_analytics'
+  
+[0m16:04:35.014495 [debug] [ThreadPool]: Using postgres connection "list_taxi_analytics_staging"
+[0m16:04:35.014638 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:04:35.014782 [debug] [ThreadPool]: On list_taxi_analytics_staging: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "connection_name": "list_taxi_analytics_staging"} */
+select
+      'taxi' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_staging'
+    union all
+    select
+      'taxi' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_staging'
+    union all
+    select
+      'taxi' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_staging'
+    union all
+    select distinct
+     'taxi' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'analytics_staging'
+  
+[0m16:04:35.015039 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:04:35.023276 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.009 seconds
+[0m16:04:35.023447 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.008 seconds
+[0m16:04:35.023922 [debug] [ThreadPool]: On list_taxi_analytics_analytics: ROLLBACK
+[0m16:04:35.024331 [debug] [ThreadPool]: On list_taxi_analytics_staging: ROLLBACK
+[0m16:04:35.024529 [debug] [ThreadPool]: On list_taxi_analytics_analytics: Close
+[0m16:04:35.024638 [debug] [ThreadPool]: On list_taxi_analytics_staging: Close
+[0m16:04:35.026324 [debug] [MainThread]: Using postgres connection "master"
+[0m16:04:35.026499 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m16:04:35.026642 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:04:35.032558 [debug] [MainThread]: SQL status: SELECT 0 in 0.006 seconds
+[0m16:04:35.033039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'df0218ef-9f17-464f-bece-d6bf0b9c10d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa3e38fe0>]}
+[0m16:04:35.033247 [debug] [MainThread]: On master: ROLLBACK
+[0m16:04:35.033411 [debug] [MainThread]: On master: COMMIT
+[0m16:04:35.033532 [debug] [MainThread]: Using postgres connection "master"
+[0m16:04:35.033643 [debug] [MainThread]: On master: COMMIT
+[0m16:04:35.033820 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m16:04:35.033957 [debug] [MainThread]: On master: Close
+[0m16:04:35.036227 [debug] [Thread-1 (]: Began running node model.nyc_taxi.stg_yellow_taxi_trips
+[0m16:04:35.036500 [info ] [Thread-1 (]: 1 of 3 START sql view model analytics_staging.stg_yellow_taxi_trips ............ [RUN]
+[0m16:04:35.036729 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_taxi_analytics_staging, now model.nyc_taxi.stg_yellow_taxi_trips)
+[0m16:04:35.036889 [debug] [Thread-1 (]: Began compiling node model.nyc_taxi.stg_yellow_taxi_trips
+[0m16:04:35.038918 [debug] [Thread-1 (]: Writing injected SQL for node "model.nyc_taxi.stg_yellow_taxi_trips"
+[0m16:04:35.039777 [debug] [Thread-1 (]: Began executing node model.nyc_taxi.stg_yellow_taxi_trips
+[0m16:04:35.052489 [debug] [Thread-1 (]: Writing runtime sql for node "model.nyc_taxi.stg_yellow_taxi_trips"
+[0m16:04:35.053083 [debug] [Thread-1 (]: Using postgres connection "model.nyc_taxi.stg_yellow_taxi_trips"
+[0m16:04:35.053263 [debug] [Thread-1 (]: On model.nyc_taxi.stg_yellow_taxi_trips: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "model.nyc_taxi.stg_yellow_taxi_trips"} */
+
+  create view "taxi"."analytics_staging"."stg_yellow_taxi_trips__dbt_tmp"
+    
+    
+  as (
+    with source as (
+
+    select *
+    from raw.yellow_taxi_trips
+
+),
+
+cleaned as (
+
+    select
+        vendor_id,
+        pickup_datetime,
+        dropoff_datetime,
+        passenger_count,
+        trip_distance,
+        ratecode_id,
+        store_and_fwd_flag,
+        pickup_location_id,
+        dropoff_location_id,
+        payment_type,
+        fare_amount,
+        extra,
+        mta_tax,
+        tip_amount,
+        tolls_amount,
+        improvement_surcharge,
+        total_amount,
+        congestion_surcharge,
+
+        extract(
+            epoch from (dropoff_datetime - pickup_datetime)
+        ) / 60.0 as trip_duration_minutes
+
+    from source
+
+    where pickup_datetime is not null
+      and dropoff_datetime is not null
+      and trip_distance > 0
+      and total_amount > 0
+      and dropoff_datetime > pickup_datetime
+      and extract(
+            epoch from (dropoff_datetime - pickup_datetime)
+          ) / 60.0 < 1440
+
+)
+
+select *
+from cleaned
+  );
+[0m16:04:35.053423 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:04:35.059453 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.006 seconds
+[0m16:04:35.061694 [debug] [Thread-1 (]: Using postgres connection "model.nyc_taxi.stg_yellow_taxi_trips"
+[0m16:04:35.061856 [debug] [Thread-1 (]: On model.nyc_taxi.stg_yellow_taxi_trips: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "model.nyc_taxi.stg_yellow_taxi_trips"} */
+alter table "taxi"."analytics_staging"."stg_yellow_taxi_trips__dbt_tmp" rename to "stg_yellow_taxi_trips"
+[0m16:04:35.062190 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m16:04:35.068434 [debug] [Thread-1 (]: On model.nyc_taxi.stg_yellow_taxi_trips: COMMIT
+[0m16:04:35.068608 [debug] [Thread-1 (]: Using postgres connection "model.nyc_taxi.stg_yellow_taxi_trips"
+[0m16:04:35.068742 [debug] [Thread-1 (]: On model.nyc_taxi.stg_yellow_taxi_trips: COMMIT
+[0m16:04:35.069144 [debug] [Thread-1 (]: SQL status: COMMIT in 0.000 seconds
+[0m16:04:35.071229 [debug] [Thread-1 (]: Applying DROP to: "taxi"."analytics_staging"."stg_yellow_taxi_trips__dbt_backup"
+[0m16:04:35.073078 [debug] [Thread-1 (]: Using postgres connection "model.nyc_taxi.stg_yellow_taxi_trips"
+[0m16:04:35.073243 [debug] [Thread-1 (]: On model.nyc_taxi.stg_yellow_taxi_trips: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "model.nyc_taxi.stg_yellow_taxi_trips"} */
+drop view if exists "taxi"."analytics_staging"."stg_yellow_taxi_trips__dbt_backup" cascade
+[0m16:04:35.073445 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m16:04:35.074416 [debug] [Thread-1 (]: On model.nyc_taxi.stg_yellow_taxi_trips: Close
+[0m16:04:35.075179 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'df0218ef-9f17-464f-bece-d6bf0b9c10d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa71852b0>]}
+[0m16:04:35.075496 [info ] [Thread-1 (]: 1 of 3 OK created sql view model analytics_staging.stg_yellow_taxi_trips ....... [[32mCREATE VIEW[0m in 0.04s]
+[0m16:04:35.075746 [debug] [Thread-1 (]: Finished running node model.nyc_taxi.stg_yellow_taxi_trips
+[0m16:04:35.076180 [debug] [Thread-3 (]: Began running node model.nyc_taxi.daily_trip_summary
+[0m16:04:35.076363 [debug] [Thread-4 (]: Began running node model.nyc_taxi.fct_yellow_taxi_trips
+[0m16:04:35.076580 [info ] [Thread-3 (]: 2 of 3 START sql table model analytics_analytics.daily_trip_summary ............ [RUN]
+[0m16:04:35.077076 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.nyc_taxi.daily_trip_summary'
+[0m16:04:35.076815 [info ] [Thread-4 (]: 3 of 3 START sql table model analytics_analytics.fct_yellow_taxi_trips ......... [RUN]
+[0m16:04:35.077405 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.nyc_taxi.fct_yellow_taxi_trips'
+[0m16:04:35.077224 [debug] [Thread-3 (]: Began compiling node model.nyc_taxi.daily_trip_summary
+[0m16:04:35.077528 [debug] [Thread-4 (]: Began compiling node model.nyc_taxi.fct_yellow_taxi_trips
+[0m16:04:35.078911 [debug] [Thread-4 (]: Writing injected SQL for node "model.nyc_taxi.fct_yellow_taxi_trips"
+[0m16:04:35.078203 [debug] [Thread-3 (]: Writing injected SQL for node "model.nyc_taxi.daily_trip_summary"
+[0m16:04:35.080358 [debug] [Thread-4 (]: Began executing node model.nyc_taxi.fct_yellow_taxi_trips
+[0m16:04:35.080518 [debug] [Thread-3 (]: Began executing node model.nyc_taxi.daily_trip_summary
+[0m16:04:35.089573 [debug] [Thread-4 (]: Writing runtime sql for node "model.nyc_taxi.fct_yellow_taxi_trips"
+[0m16:04:35.092244 [debug] [Thread-3 (]: Writing runtime sql for node "model.nyc_taxi.daily_trip_summary"
+[0m16:04:35.093103 [debug] [Thread-3 (]: Using postgres connection "model.nyc_taxi.daily_trip_summary"
+[0m16:04:35.093334 [debug] [Thread-4 (]: Using postgres connection "model.nyc_taxi.fct_yellow_taxi_trips"
+[0m16:04:35.093712 [debug] [Thread-4 (]: On model.nyc_taxi.fct_yellow_taxi_trips: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "model.nyc_taxi.fct_yellow_taxi_trips"} */
+
+  
+    
+
+  create  table "taxi"."analytics_analytics"."fct_yellow_taxi_trips__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select
+    vendor_id,
+    pickup_datetime,
+    dropoff_datetime,
+
+    date(pickup_datetime) as pickup_date,
+    extract(hour from pickup_datetime) as pickup_hour,
+
+    passenger_count,
+    trip_distance,
+    trip_duration_minutes,
+
+    ratecode_id,
+    store_and_fwd_flag,
+
+    pickup_location_id,
+    dropoff_location_id,
+
+    payment_type,
+
+    fare_amount,
+    extra,
+    mta_tax,
+    tip_amount,
+    tolls_amount,
+    improvement_surcharge,
+    total_amount,
+    congestion_surcharge
+
+from "taxi"."analytics_staging"."stg_yellow_taxi_trips"
+  );
+  
+[0m16:04:35.093505 [debug] [Thread-3 (]: On model.nyc_taxi.daily_trip_summary: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "model.nyc_taxi.daily_trip_summary"} */
+
+  
+    
+
+  create  table "taxi"."analytics_analytics"."daily_trip_summary__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select
+    date(pickup_datetime) as trip_date,
+    count(*) as trip_count,
+    sum(total_amount) as total_revenue,
+    avg(trip_distance) as avg_trip_distance,
+    avg(trip_duration_minutes) as avg_trip_duration_minutes
+
+from "taxi"."analytics_staging"."stg_yellow_taxi_trips"
+
+group by date(pickup_datetime)
+order by trip_date
+  );
+  
+[0m16:04:35.094100 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m16:04:35.093922 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m16:04:38.723283 [debug] [Thread-3 (]: SQL status: SELECT 31 in 3.629 seconds
+[0m16:04:38.728565 [debug] [Thread-3 (]: Using postgres connection "model.nyc_taxi.daily_trip_summary"
+[0m16:04:38.728812 [debug] [Thread-3 (]: On model.nyc_taxi.daily_trip_summary: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "model.nyc_taxi.daily_trip_summary"} */
+alter table "taxi"."analytics_analytics"."daily_trip_summary__dbt_tmp" rename to "daily_trip_summary"
+[0m16:04:38.729512 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:04:38.730465 [debug] [Thread-3 (]: On model.nyc_taxi.daily_trip_summary: COMMIT
+[0m16:04:38.730715 [debug] [Thread-3 (]: Using postgres connection "model.nyc_taxi.daily_trip_summary"
+[0m16:04:38.730896 [debug] [Thread-3 (]: On model.nyc_taxi.daily_trip_summary: COMMIT
+[0m16:04:38.738635 [debug] [Thread-3 (]: SQL status: COMMIT in 0.006 seconds
+[0m16:04:38.739595 [debug] [Thread-3 (]: Applying DROP to: "taxi"."analytics_analytics"."daily_trip_summary__dbt_backup"
+[0m16:04:38.741215 [debug] [Thread-3 (]: Using postgres connection "model.nyc_taxi.daily_trip_summary"
+[0m16:04:38.741415 [debug] [Thread-3 (]: On model.nyc_taxi.daily_trip_summary: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "model.nyc_taxi.daily_trip_summary"} */
+drop table if exists "taxi"."analytics_analytics"."daily_trip_summary__dbt_backup" cascade
+[0m16:04:38.741793 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m16:04:38.742609 [debug] [Thread-3 (]: On model.nyc_taxi.daily_trip_summary: Close
+[0m16:04:38.743103 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'df0218ef-9f17-464f-bece-d6bf0b9c10d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa0b9b2c0>]}
+[0m16:04:38.743613 [info ] [Thread-3 (]: 2 of 3 OK created sql table model analytics_analytics.daily_trip_summary ....... [[32mSELECT 31[0m in 3.67s]
+[0m16:04:38.744550 [debug] [Thread-3 (]: Finished running node model.nyc_taxi.daily_trip_summary
+[0m16:04:41.425117 [debug] [Thread-4 (]: SQL status: SELECT 10839039 in 6.331 seconds
+[0m16:04:41.427714 [debug] [Thread-4 (]: Using postgres connection "model.nyc_taxi.fct_yellow_taxi_trips"
+[0m16:04:41.427944 [debug] [Thread-4 (]: On model.nyc_taxi.fct_yellow_taxi_trips: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "model.nyc_taxi.fct_yellow_taxi_trips"} */
+alter table "taxi"."analytics_analytics"."fct_yellow_taxi_trips__dbt_tmp" rename to "fct_yellow_taxi_trips"
+[0m16:04:41.428477 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m16:04:41.429519 [debug] [Thread-4 (]: On model.nyc_taxi.fct_yellow_taxi_trips: COMMIT
+[0m16:04:41.429738 [debug] [Thread-4 (]: Using postgres connection "model.nyc_taxi.fct_yellow_taxi_trips"
+[0m16:04:41.429922 [debug] [Thread-4 (]: On model.nyc_taxi.fct_yellow_taxi_trips: COMMIT
+[0m16:04:41.435954 [debug] [Thread-4 (]: SQL status: COMMIT in 0.006 seconds
+[0m16:04:41.436746 [debug] [Thread-4 (]: Applying DROP to: "taxi"."analytics_analytics"."fct_yellow_taxi_trips__dbt_backup"
+[0m16:04:41.437084 [debug] [Thread-4 (]: Using postgres connection "model.nyc_taxi.fct_yellow_taxi_trips"
+[0m16:04:41.437246 [debug] [Thread-4 (]: On model.nyc_taxi.fct_yellow_taxi_trips: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "model.nyc_taxi.fct_yellow_taxi_trips"} */
+drop table if exists "taxi"."analytics_analytics"."fct_yellow_taxi_trips__dbt_backup" cascade
+[0m16:04:41.437595 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m16:04:41.438307 [debug] [Thread-4 (]: On model.nyc_taxi.fct_yellow_taxi_trips: Close
+[0m16:04:41.438677 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'df0218ef-9f17-464f-bece-d6bf0b9c10d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1fc23f0>]}
+[0m16:04:41.439115 [info ] [Thread-4 (]: 3 of 3 OK created sql table model analytics_analytics.fct_yellow_taxi_trips .... [[32mSELECT 10839039[0m in 6.36s]
+[0m16:04:41.439524 [debug] [Thread-4 (]: Finished running node model.nyc_taxi.fct_yellow_taxi_trips
+[0m16:04:41.440933 [debug] [MainThread]: On master: COMMIT
+[0m16:04:41.441121 [debug] [MainThread]: Using postgres connection "master"
+[0m16:04:41.441267 [debug] [MainThread]: On master: COMMIT
+[0m16:04:41.441418 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:04:41.444378 [debug] [MainThread]: SQL status: COMMIT in 0.003 seconds
+[0m16:04:41.444511 [debug] [MainThread]: On master: Close
+[0m16:04:41.444683 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:04:41.444807 [debug] [MainThread]: Connection 'list_taxi_analytics_analytics' was properly closed.
+[0m16:04:41.444944 [debug] [MainThread]: Connection 'model.nyc_taxi.stg_yellow_taxi_trips' was properly closed.
+[0m16:04:41.445081 [debug] [MainThread]: Connection 'model.nyc_taxi.daily_trip_summary' was properly closed.
+[0m16:04:41.445229 [debug] [MainThread]: Connection 'model.nyc_taxi.fct_yellow_taxi_trips' was properly closed.
+[0m16:04:41.445468 [info ] [MainThread]: 
+[0m16:04:41.445624 [info ] [MainThread]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 6.47 seconds (6.47s).
+[0m16:04:41.446031 [debug] [MainThread]: Command end result
+[0m16:04:41.464004 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/project/dbt/target/manifest.json
+[0m16:04:41.465520 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/project/dbt/target/semantic_manifest.json
+[0m16:04:41.466965 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/project/dbt/target/osi_document.json
+[0m16:04:41.470591 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/project/dbt/target/run_results.json
+[0m16:04:41.470766 [info ] [MainThread]: 
+[0m16:04:41.470966 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:04:41.471130 [info ] [MainThread]: 
+[0m16:04:41.471306 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+[0m16:04:41.472105 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 7.321441, "process_in_blocks": "61984", "process_kernel_time": 0.155886, "process_mem_max_rss": "145888", "process_out_blocks": "4478", "process_user_time": 1.724803}
+[0m16:04:41.472368 [debug] [MainThread]: Command `dbt run` succeeded at 16:04:41.472331 after 7.32 seconds
+[0m16:04:41.472572 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa565e990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa4b105c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa0b98770>]}
+[0m16:04:41.472738 [debug] [MainThread]: Flushing usage events
+[0m16:04:42.174524 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:04:44.796512 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa2d9fd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa3511f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa2d9c500>]}
+
+
+============================== 16:04:44.799955 | f4395505-ccc6-4a88-a1b9-dee88140393c ==============================
+[0m16:04:44.799955 [info ] [MainThread]: Running with dbt=1.12.5
+[0m16:04:44.800227 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'printer_width': '80', 'log_format': 'default', 'log_path': '/opt/airflow/project/dbt/logs', 'no_print': 'None', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'debug': 'False', 'invocation_command': 'dbt test --profiles-dir .', 'hints_enabled': 'True', 'write_json': 'True', 'profiles_dir': '.', 'empty': 'None', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'introspect': 'True', 'partial_parse': 'True', 'quiet': 'False', 'static_parser': 'True', 'target_path': 'None'}
+[0m16:04:44.869879 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f4395505-ccc6-4a88-a1b9-dee88140393c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa3c020f0>]}
+[0m16:04:44.892514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f4395505-ccc6-4a88-a1b9-dee88140393c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa23d0260>]}
+[0m16:04:44.893029 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m16:04:44.922591 [debug] [MainThread]: checksum: 922d4ebfcdefe29b73e69bf4f56c7e20c3b4e11b50e2bdf2ddd2928c206551e5, vars: {}, profile: nyc_taxi, target: dev, version: 1.12.5
+[0m16:04:44.981139 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:04:44.981386 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m16:04:44.981571 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:04:44.985370 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f4395505-ccc6-4a88-a1b9-dee88140393c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa16f0980>]}
+[0m16:04:45.039382 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/project/dbt/target/manifest.json
+[0m16:04:45.040340 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/project/dbt/target/semantic_manifest.json
+[0m16:04:45.045732 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/project/dbt/target/osi_document.json
+[0m16:04:45.057213 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f4395505-ccc6-4a88-a1b9-dee88140393c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa136ddf0>]}
+[0m16:04:45.057527 [info ] [MainThread]: Found 3 models, 15 data tests, 477 macros
+[0m16:04:45.057712 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f4395505-ccc6-4a88-a1b9-dee88140393c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa16f16a0>]}
+[0m16:04:45.058716 [info ] [MainThread]: 
+[0m16:04:45.058875 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:04:45.059001 [info ] [MainThread]: 
+[0m16:04:45.059228 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m16:04:45.060868 [debug] [ThreadPool]: Acquiring new postgres connection 'list_taxi_analytics_staging'
+[0m16:04:45.065678 [debug] [ThreadPool]: Acquiring new postgres connection 'list_taxi_analytics_analytics'
+[0m16:04:45.075395 [debug] [ThreadPool]: Using postgres connection "list_taxi_analytics_staging"
+[0m16:04:45.075605 [debug] [ThreadPool]: Using postgres connection "list_taxi_analytics_analytics"
+[0m16:04:45.075787 [debug] [ThreadPool]: On list_taxi_analytics_staging: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "connection_name": "list_taxi_analytics_staging"} */
+select
+      'taxi' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_staging'
+    union all
+    select
+      'taxi' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_staging'
+    union all
+    select
+      'taxi' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_staging'
+    union all
+    select distinct
+     'taxi' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'analytics_staging'
+  
+[0m16:04:45.075989 [debug] [ThreadPool]: On list_taxi_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "connection_name": "list_taxi_analytics_analytics"} */
+select
+      'taxi' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'taxi' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'taxi' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select distinct
+     'taxi' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'analytics_analytics'
+  
+[0m16:04:45.076183 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:04:45.076367 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:04:45.081722 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.005 seconds
+[0m16:04:45.081897 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.006 seconds
+[0m16:04:45.082464 [debug] [ThreadPool]: On list_taxi_analytics_analytics: ROLLBACK
+[0m16:04:45.082989 [debug] [ThreadPool]: On list_taxi_analytics_staging: ROLLBACK
+[0m16:04:45.083253 [debug] [ThreadPool]: On list_taxi_analytics_analytics: Close
+[0m16:04:45.083401 [debug] [ThreadPool]: On list_taxi_analytics_staging: Close
+[0m16:04:45.085343 [debug] [MainThread]: Using postgres connection "master"
+[0m16:04:45.085535 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m16:04:45.085714 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:04:45.090456 [debug] [MainThread]: SQL status: SELECT 1 in 0.005 seconds
+[0m16:04:45.091001 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f4395505-ccc6-4a88-a1b9-dee88140393c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1496bd0>]}
+[0m16:04:45.091206 [debug] [MainThread]: On master: ROLLBACK
+[0m16:04:45.091390 [debug] [MainThread]: On master: COMMIT
+[0m16:04:45.091512 [debug] [MainThread]: Using postgres connection "master"
+[0m16:04:45.091629 [debug] [MainThread]: On master: COMMIT
+[0m16:04:45.091856 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m16:04:45.091970 [debug] [MainThread]: On master: Close
+[0m16:04:45.093970 [debug] [Thread-1 (]: Began running node test.nyc_taxi.no_invalid_total_amount
+[0m16:04:45.094148 [debug] [Thread-2 (]: Began running node test.nyc_taxi.no_invalid_trip_distance
+[0m16:04:45.094305 [debug] [Thread-3 (]: Began running node test.nyc_taxi.no_invalid_trip_times
+[0m16:04:45.094457 [info ] [Thread-1 (]: 1 of 15 START test no_invalid_total_amount ..................................... [RUN]
+[0m16:04:45.094657 [debug] [Thread-4 (]: Began running node test.nyc_taxi.not_null_daily_trip_summary_total_revenue.58c30ec7b3
+[0m16:04:45.094824 [info ] [Thread-2 (]: 2 of 15 START test no_invalid_trip_distance .................................... [RUN]
+[0m16:04:45.095088 [info ] [Thread-3 (]: 3 of 15 START test no_invalid_trip_times ....................................... [RUN]
+[0m16:04:45.095339 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_taxi_analytics_staging, now test.nyc_taxi.no_invalid_total_amount)
+[0m16:04:45.095527 [info ] [Thread-4 (]: 4 of 15 START test not_null_daily_trip_summary_total_revenue ................... [RUN]
+[0m16:04:45.095767 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_taxi_analytics_analytics, now test.nyc_taxi.no_invalid_trip_distance)
+[0m16:04:45.095990 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.nyc_taxi.no_invalid_trip_times'
+[0m16:04:45.096163 [debug] [Thread-1 (]: Began compiling node test.nyc_taxi.no_invalid_total_amount
+[0m16:04:45.096381 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.nyc_taxi.not_null_daily_trip_summary_total_revenue.58c30ec7b3'
+[0m16:04:45.096543 [debug] [Thread-2 (]: Began compiling node test.nyc_taxi.no_invalid_trip_distance
+[0m16:04:45.096714 [debug] [Thread-3 (]: Began compiling node test.nyc_taxi.no_invalid_trip_times
+[0m16:04:45.099143 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_taxi.no_invalid_total_amount"
+[0m16:04:45.099343 [debug] [Thread-4 (]: Began compiling node test.nyc_taxi.not_null_daily_trip_summary_total_revenue.58c30ec7b3
+[0m16:04:45.100132 [debug] [Thread-2 (]: Writing injected SQL for node "test.nyc_taxi.no_invalid_trip_distance"
+[0m16:04:45.100774 [debug] [Thread-3 (]: Writing injected SQL for node "test.nyc_taxi.no_invalid_trip_times"
+[0m16:04:45.106325 [debug] [Thread-4 (]: Writing injected SQL for node "test.nyc_taxi.not_null_daily_trip_summary_total_revenue.58c30ec7b3"
+[0m16:04:45.107357 [debug] [Thread-1 (]: Began executing node test.nyc_taxi.no_invalid_total_amount
+[0m16:04:45.107574 [debug] [Thread-2 (]: Began executing node test.nyc_taxi.no_invalid_trip_distance
+[0m16:04:45.114531 [debug] [Thread-1 (]: Writing runtime sql for node "test.nyc_taxi.no_invalid_total_amount"
+[0m16:04:45.114676 [debug] [Thread-3 (]: Began executing node test.nyc_taxi.no_invalid_trip_times
+[0m16:04:45.115384 [debug] [Thread-2 (]: Writing runtime sql for node "test.nyc_taxi.no_invalid_trip_distance"
+[0m16:04:45.115612 [debug] [Thread-4 (]: Began executing node test.nyc_taxi.not_null_daily_trip_summary_total_revenue.58c30ec7b3
+[0m16:04:45.116419 [debug] [Thread-3 (]: Writing runtime sql for node "test.nyc_taxi.no_invalid_trip_times"
+[0m16:04:45.117465 [debug] [Thread-4 (]: Writing runtime sql for node "test.nyc_taxi.not_null_daily_trip_summary_total_revenue.58c30ec7b3"
+[0m16:04:45.118073 [debug] [Thread-1 (]: Using postgres connection "test.nyc_taxi.no_invalid_total_amount"
+[0m16:04:45.118260 [debug] [Thread-2 (]: Using postgres connection "test.nyc_taxi.no_invalid_trip_distance"
+[0m16:04:45.118701 [debug] [Thread-2 (]: On test.nyc_taxi.no_invalid_trip_distance: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "test.nyc_taxi.no_invalid_trip_distance"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select *
+from "taxi"."analytics_staging"."stg_yellow_taxi_trips"
+where trip_distance <= 0
+  
+  
+      
+    ) dbt_internal_test
+[0m16:04:45.118432 [debug] [Thread-1 (]: On test.nyc_taxi.no_invalid_total_amount: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "test.nyc_taxi.no_invalid_total_amount"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select *
+from "taxi"."analytics_staging"."stg_yellow_taxi_trips"
+where total_amount <= 0
+  
+  
+      
+    ) dbt_internal_test
+[0m16:04:45.118870 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m16:04:45.119031 [debug] [Thread-3 (]: Using postgres connection "test.nyc_taxi.no_invalid_trip_times"
+[0m16:04:45.119183 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:04:45.119411 [debug] [Thread-4 (]: Using postgres connection "test.nyc_taxi.not_null_daily_trip_summary_total_revenue.58c30ec7b3"
+[0m16:04:45.119632 [debug] [Thread-3 (]: On test.nyc_taxi.no_invalid_trip_times: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "test.nyc_taxi.no_invalid_trip_times"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select *
+from "taxi"."analytics_staging"."stg_yellow_taxi_trips"
+where dropoff_datetime <= pickup_datetime
+  
+  
+      
+    ) dbt_internal_test
+[0m16:04:45.119926 [debug] [Thread-4 (]: On test.nyc_taxi.not_null_daily_trip_summary_total_revenue.58c30ec7b3: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "test.nyc_taxi.not_null_daily_trip_summary_total_revenue.58c30ec7b3"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select total_revenue
+from "taxi"."analytics_analytics"."daily_trip_summary"
+where total_revenue is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:04:45.120295 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m16:04:45.120114 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m16:04:45.123051 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.003 seconds
+[0m16:04:45.126258 [debug] [Thread-4 (]: On test.nyc_taxi.not_null_daily_trip_summary_total_revenue.58c30ec7b3: ROLLBACK
+[0m16:04:45.126744 [debug] [Thread-4 (]: On test.nyc_taxi.not_null_daily_trip_summary_total_revenue.58c30ec7b3: Close
+[0m16:04:45.127341 [info ] [Thread-4 (]: 4 of 15 PASS not_null_daily_trip_summary_total_revenue ......................... [[32mPASS[0m in 0.03s]
+[0m16:04:45.128022 [debug] [Thread-4 (]: Finished running node test.nyc_taxi.not_null_daily_trip_summary_total_revenue.58c30ec7b3
+[0m16:04:45.128553 [debug] [Thread-4 (]: Began running node test.nyc_taxi.not_null_daily_trip_summary_trip_count.50d3e56b6e
+[0m16:04:45.129204 [info ] [Thread-4 (]: 5 of 15 START test not_null_daily_trip_summary_trip_count ...................... [RUN]
+[0m16:04:45.129835 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.nyc_taxi.not_null_daily_trip_summary_total_revenue.58c30ec7b3, now test.nyc_taxi.not_null_daily_trip_summary_trip_count.50d3e56b6e)
+[0m16:04:45.130236 [debug] [Thread-4 (]: Began compiling node test.nyc_taxi.not_null_daily_trip_summary_trip_count.50d3e56b6e
+[0m16:04:45.135373 [debug] [Thread-4 (]: Writing injected SQL for node "test.nyc_taxi.not_null_daily_trip_summary_trip_count.50d3e56b6e"
+[0m16:04:45.136087 [debug] [Thread-4 (]: Began executing node test.nyc_taxi.not_null_daily_trip_summary_trip_count.50d3e56b6e
+[0m16:04:45.137196 [debug] [Thread-4 (]: Writing runtime sql for node "test.nyc_taxi.not_null_daily_trip_summary_trip_count.50d3e56b6e"
+[0m16:04:45.137824 [debug] [Thread-4 (]: Using postgres connection "test.nyc_taxi.not_null_daily_trip_summary_trip_count.50d3e56b6e"
+[0m16:04:45.138085 [debug] [Thread-4 (]: On test.nyc_taxi.not_null_daily_trip_summary_trip_count.50d3e56b6e: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "test.nyc_taxi.not_null_daily_trip_summary_trip_count.50d3e56b6e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select trip_count
+from "taxi"."analytics_analytics"."daily_trip_summary"
+where trip_count is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:04:45.138368 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m16:04:45.146282 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.008 seconds
+[0m16:04:45.150380 [debug] [Thread-4 (]: On test.nyc_taxi.not_null_daily_trip_summary_trip_count.50d3e56b6e: ROLLBACK
+[0m16:04:45.152350 [debug] [Thread-4 (]: On test.nyc_taxi.not_null_daily_trip_summary_trip_count.50d3e56b6e: Close
+[0m16:04:45.153351 [info ] [Thread-4 (]: 5 of 15 PASS not_null_daily_trip_summary_trip_count ............................ [[32mPASS[0m in 0.02s]
+[0m16:04:45.153720 [debug] [Thread-4 (]: Finished running node test.nyc_taxi.not_null_daily_trip_summary_trip_count.50d3e56b6e
+[0m16:04:45.153949 [debug] [Thread-4 (]: Began running node test.nyc_taxi.not_null_daily_trip_summary_trip_date.dbafd11c25
+[0m16:04:45.154149 [info ] [Thread-4 (]: 6 of 15 START test not_null_daily_trip_summary_trip_date ....................... [RUN]
+[0m16:04:45.154379 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.nyc_taxi.not_null_daily_trip_summary_trip_count.50d3e56b6e, now test.nyc_taxi.not_null_daily_trip_summary_trip_date.dbafd11c25)
+[0m16:04:45.154543 [debug] [Thread-4 (]: Began compiling node test.nyc_taxi.not_null_daily_trip_summary_trip_date.dbafd11c25
+[0m16:04:45.157807 [debug] [Thread-4 (]: Writing injected SQL for node "test.nyc_taxi.not_null_daily_trip_summary_trip_date.dbafd11c25"
+[0m16:04:45.158543 [debug] [Thread-4 (]: Began executing node test.nyc_taxi.not_null_daily_trip_summary_trip_date.dbafd11c25
+[0m16:04:45.159460 [debug] [Thread-4 (]: Writing runtime sql for node "test.nyc_taxi.not_null_daily_trip_summary_trip_date.dbafd11c25"
+[0m16:04:45.161552 [debug] [Thread-4 (]: Using postgres connection "test.nyc_taxi.not_null_daily_trip_summary_trip_date.dbafd11c25"
+[0m16:04:45.161764 [debug] [Thread-4 (]: On test.nyc_taxi.not_null_daily_trip_summary_trip_date.dbafd11c25: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "test.nyc_taxi.not_null_daily_trip_summary_trip_date.dbafd11c25"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select trip_date
+from "taxi"."analytics_analytics"."daily_trip_summary"
+where trip_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:04:45.161939 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m16:04:45.171102 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.009 seconds
+[0m16:04:45.172389 [debug] [Thread-4 (]: On test.nyc_taxi.not_null_daily_trip_summary_trip_date.dbafd11c25: ROLLBACK
+[0m16:04:45.172717 [debug] [Thread-4 (]: On test.nyc_taxi.not_null_daily_trip_summary_trip_date.dbafd11c25: Close
+[0m16:04:45.175676 [info ] [Thread-4 (]: 6 of 15 PASS not_null_daily_trip_summary_trip_date ............................. [[32mPASS[0m in 0.02s]
+[0m16:04:45.176851 [debug] [Thread-4 (]: Finished running node test.nyc_taxi.not_null_daily_trip_summary_trip_date.dbafd11c25
+[0m16:04:45.177359 [debug] [Thread-4 (]: Began running node test.nyc_taxi.not_null_fct_yellow_taxi_trips_dropoff_datetime.f8bff0dd34
+[0m16:04:45.177888 [info ] [Thread-4 (]: 7 of 15 START test not_null_fct_yellow_taxi_trips_dropoff_datetime ............. [RUN]
+[0m16:04:45.178681 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.nyc_taxi.not_null_daily_trip_summary_trip_date.dbafd11c25, now test.nyc_taxi.not_null_fct_yellow_taxi_trips_dropoff_datetime.f8bff0dd34)
+[0m16:04:45.179122 [debug] [Thread-4 (]: Began compiling node test.nyc_taxi.not_null_fct_yellow_taxi_trips_dropoff_datetime.f8bff0dd34
+[0m16:04:45.246007 [debug] [Thread-4 (]: Writing injected SQL for node "test.nyc_taxi.not_null_fct_yellow_taxi_trips_dropoff_datetime.f8bff0dd34"
+[0m16:04:45.249748 [debug] [Thread-4 (]: Began executing node test.nyc_taxi.not_null_fct_yellow_taxi_trips_dropoff_datetime.f8bff0dd34
+[0m16:04:45.251814 [debug] [Thread-4 (]: Writing runtime sql for node "test.nyc_taxi.not_null_fct_yellow_taxi_trips_dropoff_datetime.f8bff0dd34"
+[0m16:04:45.253136 [debug] [Thread-4 (]: Using postgres connection "test.nyc_taxi.not_null_fct_yellow_taxi_trips_dropoff_datetime.f8bff0dd34"
+[0m16:04:45.253364 [debug] [Thread-4 (]: On test.nyc_taxi.not_null_fct_yellow_taxi_trips_dropoff_datetime.f8bff0dd34: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "test.nyc_taxi.not_null_fct_yellow_taxi_trips_dropoff_datetime.f8bff0dd34"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select dropoff_datetime
+from "taxi"."analytics_analytics"."fct_yellow_taxi_trips"
+where dropoff_datetime is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:04:45.253539 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m16:04:46.099514 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.846 seconds
+[0m16:04:46.101656 [debug] [Thread-4 (]: On test.nyc_taxi.not_null_fct_yellow_taxi_trips_dropoff_datetime.f8bff0dd34: ROLLBACK
+[0m16:04:46.102631 [debug] [Thread-4 (]: On test.nyc_taxi.not_null_fct_yellow_taxi_trips_dropoff_datetime.f8bff0dd34: Close
+[0m16:04:46.103384 [info ] [Thread-4 (]: 7 of 15 PASS not_null_fct_yellow_taxi_trips_dropoff_datetime ................... [[32mPASS[0m in 0.92s]
+[0m16:04:46.104837 [debug] [Thread-4 (]: Finished running node test.nyc_taxi.not_null_fct_yellow_taxi_trips_dropoff_datetime.f8bff0dd34
+[0m16:04:46.107629 [debug] [Thread-4 (]: Began running node test.nyc_taxi.not_null_fct_yellow_taxi_trips_pickup_datetime.499e8f64b4
+[0m16:04:46.108089 [info ] [Thread-4 (]: 8 of 15 START test not_null_fct_yellow_taxi_trips_pickup_datetime .............. [RUN]
+[0m16:04:46.110419 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.nyc_taxi.not_null_fct_yellow_taxi_trips_dropoff_datetime.f8bff0dd34, now test.nyc_taxi.not_null_fct_yellow_taxi_trips_pickup_datetime.499e8f64b4)
+[0m16:04:46.111237 [debug] [Thread-4 (]: Began compiling node test.nyc_taxi.not_null_fct_yellow_taxi_trips_pickup_datetime.499e8f64b4
+[0m16:04:46.119085 [debug] [Thread-4 (]: Writing injected SQL for node "test.nyc_taxi.not_null_fct_yellow_taxi_trips_pickup_datetime.499e8f64b4"
+[0m16:04:46.119306 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.999 seconds
+[0m16:04:46.120986 [debug] [Thread-3 (]: On test.nyc_taxi.no_invalid_trip_times: ROLLBACK
+[0m16:04:46.121754 [debug] [Thread-3 (]: On test.nyc_taxi.no_invalid_trip_times: Close
+[0m16:04:46.122552 [info ] [Thread-3 (]: 3 of 15 PASS no_invalid_trip_times ............................................. [[32mPASS[0m in 1.03s]
+[0m16:04:46.123426 [debug] [Thread-3 (]: Finished running node test.nyc_taxi.no_invalid_trip_times
+[0m16:04:46.124183 [debug] [Thread-3 (]: Began running node test.nyc_taxi.not_null_fct_yellow_taxi_trips_total_amount.97407db36e
+[0m16:04:46.125179 [info ] [Thread-3 (]: 9 of 15 START test not_null_fct_yellow_taxi_trips_total_amount ................. [RUN]
+[0m16:04:46.124858 [debug] [Thread-4 (]: Began executing node test.nyc_taxi.not_null_fct_yellow_taxi_trips_pickup_datetime.499e8f64b4
+[0m16:04:46.125933 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.nyc_taxi.no_invalid_trip_times, now test.nyc_taxi.not_null_fct_yellow_taxi_trips_total_amount.97407db36e)
+[0m16:04:46.127980 [debug] [Thread-4 (]: Writing runtime sql for node "test.nyc_taxi.not_null_fct_yellow_taxi_trips_pickup_datetime.499e8f64b4"
+[0m16:04:46.128404 [debug] [Thread-3 (]: Began compiling node test.nyc_taxi.not_null_fct_yellow_taxi_trips_total_amount.97407db36e
+[0m16:04:46.133150 [debug] [Thread-3 (]: Writing injected SQL for node "test.nyc_taxi.not_null_fct_yellow_taxi_trips_total_amount.97407db36e"
+[0m16:04:46.135174 [debug] [Thread-4 (]: Using postgres connection "test.nyc_taxi.not_null_fct_yellow_taxi_trips_pickup_datetime.499e8f64b4"
+[0m16:04:46.135833 [debug] [Thread-3 (]: Began executing node test.nyc_taxi.not_null_fct_yellow_taxi_trips_total_amount.97407db36e
+[0m16:04:46.137102 [debug] [Thread-3 (]: Writing runtime sql for node "test.nyc_taxi.not_null_fct_yellow_taxi_trips_total_amount.97407db36e"
+[0m16:04:46.136194 [debug] [Thread-4 (]: On test.nyc_taxi.not_null_fct_yellow_taxi_trips_pickup_datetime.499e8f64b4: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "test.nyc_taxi.not_null_fct_yellow_taxi_trips_pickup_datetime.499e8f64b4"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select pickup_datetime
+from "taxi"."analytics_analytics"."fct_yellow_taxi_trips"
+where pickup_datetime is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:04:46.137444 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m16:04:46.138578 [debug] [Thread-3 (]: Using postgres connection "test.nyc_taxi.not_null_fct_yellow_taxi_trips_total_amount.97407db36e"
+[0m16:04:46.139068 [debug] [Thread-3 (]: On test.nyc_taxi.not_null_fct_yellow_taxi_trips_total_amount.97407db36e: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "test.nyc_taxi.not_null_fct_yellow_taxi_trips_total_amount.97407db36e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select total_amount
+from "taxi"."analytics_analytics"."fct_yellow_taxi_trips"
+where total_amount is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:04:46.139487 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m16:04:46.181617 [debug] [Thread-2 (]: SQL status: SELECT 1 in 1.063 seconds
+[0m16:04:46.184362 [debug] [Thread-2 (]: On test.nyc_taxi.no_invalid_trip_distance: ROLLBACK
+[0m16:04:46.186167 [debug] [Thread-2 (]: On test.nyc_taxi.no_invalid_trip_distance: Close
+[0m16:04:46.186627 [info ] [Thread-2 (]: 2 of 15 PASS no_invalid_trip_distance .......................................... [[32mPASS[0m in 1.09s]
+[0m16:04:46.186957 [debug] [Thread-2 (]: Finished running node test.nyc_taxi.no_invalid_trip_distance
+[0m16:04:46.187168 [debug] [Thread-2 (]: Began running node test.nyc_taxi.not_null_fct_yellow_taxi_trips_trip_distance.c0c1e3ee1b
+[0m16:04:46.187410 [info ] [Thread-2 (]: 10 of 15 START test not_null_fct_yellow_taxi_trips_trip_distance ............... [RUN]
+[0m16:04:46.187627 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.nyc_taxi.no_invalid_trip_distance, now test.nyc_taxi.not_null_fct_yellow_taxi_trips_trip_distance.c0c1e3ee1b)
+[0m16:04:46.188036 [debug] [Thread-2 (]: Began compiling node test.nyc_taxi.not_null_fct_yellow_taxi_trips_trip_distance.c0c1e3ee1b
+[0m16:04:46.188379 [debug] [Thread-1 (]: SQL status: SELECT 1 in 1.069 seconds
+[0m16:04:46.191852 [debug] [Thread-2 (]: Writing injected SQL for node "test.nyc_taxi.not_null_fct_yellow_taxi_trips_trip_distance.c0c1e3ee1b"
+[0m16:04:46.193575 [debug] [Thread-1 (]: On test.nyc_taxi.no_invalid_total_amount: ROLLBACK
+[0m16:04:46.194598 [debug] [Thread-1 (]: On test.nyc_taxi.no_invalid_total_amount: Close
+[0m16:04:46.195413 [info ] [Thread-1 (]: 1 of 15 PASS no_invalid_total_amount ........................................... [[32mPASS[0m in 1.10s]
+[0m16:04:46.196115 [debug] [Thread-1 (]: Finished running node test.nyc_taxi.no_invalid_total_amount
+[0m16:04:46.196504 [debug] [Thread-2 (]: Began executing node test.nyc_taxi.not_null_fct_yellow_taxi_trips_trip_distance.c0c1e3ee1b
+[0m16:04:46.196907 [debug] [Thread-1 (]: Began running node test.nyc_taxi.not_null_stg_yellow_taxi_trips_dropoff_datetime.a346165663
+[0m16:04:46.199508 [info ] [Thread-1 (]: 11 of 15 START test not_null_stg_yellow_taxi_trips_dropoff_datetime ............ [RUN]
+[0m16:04:46.198947 [debug] [Thread-2 (]: Writing runtime sql for node "test.nyc_taxi.not_null_fct_yellow_taxi_trips_trip_distance.c0c1e3ee1b"
+[0m16:04:46.200158 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.nyc_taxi.no_invalid_total_amount, now test.nyc_taxi.not_null_stg_yellow_taxi_trips_dropoff_datetime.a346165663)
+[0m16:04:46.200936 [debug] [Thread-1 (]: Began compiling node test.nyc_taxi.not_null_stg_yellow_taxi_trips_dropoff_datetime.a346165663
+[0m16:04:46.208940 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_taxi.not_null_stg_yellow_taxi_trips_dropoff_datetime.a346165663"
+[0m16:04:46.210083 [debug] [Thread-2 (]: Using postgres connection "test.nyc_taxi.not_null_fct_yellow_taxi_trips_trip_distance.c0c1e3ee1b"
+[0m16:04:46.210610 [debug] [Thread-2 (]: On test.nyc_taxi.not_null_fct_yellow_taxi_trips_trip_distance.c0c1e3ee1b: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "test.nyc_taxi.not_null_fct_yellow_taxi_trips_trip_distance.c0c1e3ee1b"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select trip_distance
+from "taxi"."analytics_analytics"."fct_yellow_taxi_trips"
+where trip_distance is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:04:46.211188 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m16:04:46.212398 [debug] [Thread-1 (]: Began executing node test.nyc_taxi.not_null_stg_yellow_taxi_trips_dropoff_datetime.a346165663
+[0m16:04:46.214394 [debug] [Thread-1 (]: Writing runtime sql for node "test.nyc_taxi.not_null_stg_yellow_taxi_trips_dropoff_datetime.a346165663"
+[0m16:04:46.217250 [debug] [Thread-1 (]: Using postgres connection "test.nyc_taxi.not_null_stg_yellow_taxi_trips_dropoff_datetime.a346165663"
+[0m16:04:46.217833 [debug] [Thread-1 (]: On test.nyc_taxi.not_null_stg_yellow_taxi_trips_dropoff_datetime.a346165663: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "test.nyc_taxi.not_null_stg_yellow_taxi_trips_dropoff_datetime.a346165663"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select dropoff_datetime
+from "taxi"."analytics_staging"."stg_yellow_taxi_trips"
+where dropoff_datetime is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:04:46.218356 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:04:46.428723 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.291 seconds
+[0m16:04:46.430493 [debug] [Thread-4 (]: On test.nyc_taxi.not_null_fct_yellow_taxi_trips_pickup_datetime.499e8f64b4: ROLLBACK
+[0m16:04:46.434091 [debug] [Thread-4 (]: On test.nyc_taxi.not_null_fct_yellow_taxi_trips_pickup_datetime.499e8f64b4: Close
+[0m16:04:46.434990 [info ] [Thread-4 (]: 8 of 15 PASS not_null_fct_yellow_taxi_trips_pickup_datetime .................... [[32mPASS[0m in 0.32s]
+[0m16:04:46.435379 [debug] [Thread-4 (]: Finished running node test.nyc_taxi.not_null_fct_yellow_taxi_trips_pickup_datetime.499e8f64b4
+[0m16:04:46.435652 [debug] [Thread-4 (]: Began running node test.nyc_taxi.not_null_stg_yellow_taxi_trips_pickup_datetime.2515a9b5e8
+[0m16:04:46.435900 [info ] [Thread-4 (]: 12 of 15 START test not_null_stg_yellow_taxi_trips_pickup_datetime ............. [RUN]
+[0m16:04:46.436257 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.nyc_taxi.not_null_fct_yellow_taxi_trips_pickup_datetime.499e8f64b4, now test.nyc_taxi.not_null_stg_yellow_taxi_trips_pickup_datetime.2515a9b5e8)
+[0m16:04:46.437103 [debug] [Thread-4 (]: Began compiling node test.nyc_taxi.not_null_stg_yellow_taxi_trips_pickup_datetime.2515a9b5e8
+[0m16:04:46.445365 [debug] [Thread-4 (]: Writing injected SQL for node "test.nyc_taxi.not_null_stg_yellow_taxi_trips_pickup_datetime.2515a9b5e8"
+[0m16:04:46.446884 [debug] [Thread-4 (]: Began executing node test.nyc_taxi.not_null_stg_yellow_taxi_trips_pickup_datetime.2515a9b5e8
+[0m16:04:46.449013 [debug] [Thread-4 (]: Writing runtime sql for node "test.nyc_taxi.not_null_stg_yellow_taxi_trips_pickup_datetime.2515a9b5e8"
+[0m16:04:46.450929 [debug] [Thread-4 (]: Using postgres connection "test.nyc_taxi.not_null_stg_yellow_taxi_trips_pickup_datetime.2515a9b5e8"
+[0m16:04:46.451452 [debug] [Thread-4 (]: On test.nyc_taxi.not_null_stg_yellow_taxi_trips_pickup_datetime.2515a9b5e8: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "test.nyc_taxi.not_null_stg_yellow_taxi_trips_pickup_datetime.2515a9b5e8"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select pickup_datetime
+from "taxi"."analytics_staging"."stg_yellow_taxi_trips"
+where pickup_datetime is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:04:46.451965 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m16:04:46.619198 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.408 seconds
+[0m16:04:46.620347 [debug] [Thread-2 (]: On test.nyc_taxi.not_null_fct_yellow_taxi_trips_trip_distance.c0c1e3ee1b: ROLLBACK
+[0m16:04:46.620868 [debug] [Thread-2 (]: On test.nyc_taxi.not_null_fct_yellow_taxi_trips_trip_distance.c0c1e3ee1b: Close
+[0m16:04:46.621224 [info ] [Thread-2 (]: 10 of 15 PASS not_null_fct_yellow_taxi_trips_trip_distance ..................... [[32mPASS[0m in 0.43s]
+[0m16:04:46.621530 [debug] [Thread-2 (]: Finished running node test.nyc_taxi.not_null_fct_yellow_taxi_trips_trip_distance.c0c1e3ee1b
+[0m16:04:46.621753 [debug] [Thread-2 (]: Began running node test.nyc_taxi.not_null_stg_yellow_taxi_trips_total_amount.9312eb2641
+[0m16:04:46.621955 [info ] [Thread-2 (]: 13 of 15 START test not_null_stg_yellow_taxi_trips_total_amount ................ [RUN]
+[0m16:04:46.622160 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.nyc_taxi.not_null_fct_yellow_taxi_trips_trip_distance.c0c1e3ee1b, now test.nyc_taxi.not_null_stg_yellow_taxi_trips_total_amount.9312eb2641)
+[0m16:04:46.622334 [debug] [Thread-2 (]: Began compiling node test.nyc_taxi.not_null_stg_yellow_taxi_trips_total_amount.9312eb2641
+[0m16:04:46.625909 [debug] [Thread-2 (]: Writing injected SQL for node "test.nyc_taxi.not_null_stg_yellow_taxi_trips_total_amount.9312eb2641"
+[0m16:04:46.627594 [debug] [Thread-2 (]: Began executing node test.nyc_taxi.not_null_stg_yellow_taxi_trips_total_amount.9312eb2641
+[0m16:04:46.629577 [debug] [Thread-2 (]: Writing runtime sql for node "test.nyc_taxi.not_null_stg_yellow_taxi_trips_total_amount.9312eb2641"
+[0m16:04:46.630832 [debug] [Thread-2 (]: Using postgres connection "test.nyc_taxi.not_null_stg_yellow_taxi_trips_total_amount.9312eb2641"
+[0m16:04:46.631077 [debug] [Thread-2 (]: On test.nyc_taxi.not_null_stg_yellow_taxi_trips_total_amount.9312eb2641: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "test.nyc_taxi.not_null_stg_yellow_taxi_trips_total_amount.9312eb2641"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select total_amount
+from "taxi"."analytics_staging"."stg_yellow_taxi_trips"
+where total_amount is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:04:46.631422 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m16:04:46.945058 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.727 seconds
+[0m16:04:46.946952 [debug] [Thread-1 (]: On test.nyc_taxi.not_null_stg_yellow_taxi_trips_dropoff_datetime.a346165663: ROLLBACK
+[0m16:04:46.947600 [debug] [Thread-1 (]: On test.nyc_taxi.not_null_stg_yellow_taxi_trips_dropoff_datetime.a346165663: Close
+[0m16:04:46.948632 [info ] [Thread-1 (]: 11 of 15 PASS not_null_stg_yellow_taxi_trips_dropoff_datetime .................. [[32mPASS[0m in 0.75s]
+[0m16:04:46.949636 [debug] [Thread-1 (]: Finished running node test.nyc_taxi.not_null_stg_yellow_taxi_trips_dropoff_datetime.a346165663
+[0m16:04:46.950160 [debug] [Thread-1 (]: Began running node test.nyc_taxi.not_null_stg_yellow_taxi_trips_trip_distance.d793adaf62
+[0m16:04:46.950550 [info ] [Thread-1 (]: 14 of 15 START test not_null_stg_yellow_taxi_trips_trip_distance ............... [RUN]
+[0m16:04:46.950852 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.nyc_taxi.not_null_stg_yellow_taxi_trips_dropoff_datetime.a346165663, now test.nyc_taxi.not_null_stg_yellow_taxi_trips_trip_distance.d793adaf62)
+[0m16:04:46.951112 [debug] [Thread-1 (]: Began compiling node test.nyc_taxi.not_null_stg_yellow_taxi_trips_trip_distance.d793adaf62
+[0m16:04:46.957425 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_taxi.not_null_stg_yellow_taxi_trips_trip_distance.d793adaf62"
+[0m16:04:46.959070 [debug] [Thread-1 (]: Began executing node test.nyc_taxi.not_null_stg_yellow_taxi_trips_trip_distance.d793adaf62
+[0m16:04:46.960383 [debug] [Thread-1 (]: Writing runtime sql for node "test.nyc_taxi.not_null_stg_yellow_taxi_trips_trip_distance.d793adaf62"
+[0m16:04:46.961997 [debug] [Thread-1 (]: Using postgres connection "test.nyc_taxi.not_null_stg_yellow_taxi_trips_trip_distance.d793adaf62"
+[0m16:04:46.962520 [debug] [Thread-1 (]: On test.nyc_taxi.not_null_stg_yellow_taxi_trips_trip_distance.d793adaf62: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "test.nyc_taxi.not_null_stg_yellow_taxi_trips_trip_distance.d793adaf62"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select trip_distance
+from "taxi"."analytics_staging"."stg_yellow_taxi_trips"
+where trip_distance is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:04:46.962920 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:04:47.227706 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.776 seconds
+[0m16:04:47.231244 [debug] [Thread-4 (]: On test.nyc_taxi.not_null_stg_yellow_taxi_trips_pickup_datetime.2515a9b5e8: ROLLBACK
+[0m16:04:47.233770 [debug] [Thread-4 (]: On test.nyc_taxi.not_null_stg_yellow_taxi_trips_pickup_datetime.2515a9b5e8: Close
+[0m16:04:47.234758 [info ] [Thread-4 (]: 12 of 15 PASS not_null_stg_yellow_taxi_trips_pickup_datetime ................... [[32mPASS[0m in 0.80s]
+[0m16:04:47.238293 [debug] [Thread-4 (]: Finished running node test.nyc_taxi.not_null_stg_yellow_taxi_trips_pickup_datetime.2515a9b5e8
+[0m16:04:47.240339 [debug] [Thread-4 (]: Began running node test.nyc_taxi.unique_daily_trip_summary_trip_date.3a73c1ad42
+[0m16:04:47.241401 [info ] [Thread-4 (]: 15 of 15 START test unique_daily_trip_summary_trip_date ........................ [RUN]
+[0m16:04:47.241704 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.nyc_taxi.not_null_stg_yellow_taxi_trips_pickup_datetime.2515a9b5e8, now test.nyc_taxi.unique_daily_trip_summary_trip_date.3a73c1ad42)
+[0m16:04:47.241875 [debug] [Thread-4 (]: Began compiling node test.nyc_taxi.unique_daily_trip_summary_trip_date.3a73c1ad42
+[0m16:04:47.245935 [debug] [Thread-4 (]: Writing injected SQL for node "test.nyc_taxi.unique_daily_trip_summary_trip_date.3a73c1ad42"
+[0m16:04:47.251168 [debug] [Thread-4 (]: Began executing node test.nyc_taxi.unique_daily_trip_summary_trip_date.3a73c1ad42
+[0m16:04:47.256717 [debug] [Thread-4 (]: Writing runtime sql for node "test.nyc_taxi.unique_daily_trip_summary_trip_date.3a73c1ad42"
+[0m16:04:47.262471 [debug] [Thread-4 (]: Using postgres connection "test.nyc_taxi.unique_daily_trip_summary_trip_date.3a73c1ad42"
+[0m16:04:47.262918 [debug] [Thread-4 (]: On test.nyc_taxi.unique_daily_trip_summary_trip_date.3a73c1ad42: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "nyc_taxi", "target_name": "dev", "node_id": "test.nyc_taxi.unique_daily_trip_summary_trip_date.3a73c1ad42"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    trip_date as unique_field,
+    count(*) as n_records
+
+from "taxi"."analytics_analytics"."daily_trip_summary"
+where trip_date is not null
+group by trip_date
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:04:47.266891 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m16:04:47.279891 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.013 seconds
+[0m16:04:47.283538 [debug] [Thread-4 (]: On test.nyc_taxi.unique_daily_trip_summary_trip_date.3a73c1ad42: ROLLBACK
+[0m16:04:47.285501 [debug] [Thread-4 (]: On test.nyc_taxi.unique_daily_trip_summary_trip_date.3a73c1ad42: Close
+[0m16:04:47.290366 [info ] [Thread-4 (]: 15 of 15 PASS unique_daily_trip_summary_trip_date .............................. [[32mPASS[0m in 0.05s]
+[0m16:04:47.294224 [debug] [Thread-4 (]: Finished running node test.nyc_taxi.unique_daily_trip_summary_trip_date.3a73c1ad42
+[0m16:04:47.363115 [debug] [Thread-3 (]: SQL status: SELECT 1 in 1.224 seconds
+[0m16:04:47.365079 [debug] [Thread-3 (]: On test.nyc_taxi.not_null_fct_yellow_taxi_trips_total_amount.97407db36e: ROLLBACK
+[0m16:04:47.365984 [debug] [Thread-3 (]: On test.nyc_taxi.not_null_fct_yellow_taxi_trips_total_amount.97407db36e: Close
+[0m16:04:47.366867 [info ] [Thread-3 (]: 9 of 15 PASS not_null_fct_yellow_taxi_trips_total_amount ....................... [[32mPASS[0m in 1.24s]
+[0m16:04:47.367558 [debug] [Thread-3 (]: Finished running node test.nyc_taxi.not_null_fct_yellow_taxi_trips_total_amount.97407db36e
+[0m16:04:47.382027 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.751 seconds
+[0m16:04:47.382852 [debug] [Thread-2 (]: On test.nyc_taxi.not_null_stg_yellow_taxi_trips_total_amount.9312eb2641: ROLLBACK
+[0m16:04:47.383165 [debug] [Thread-2 (]: On test.nyc_taxi.not_null_stg_yellow_taxi_trips_total_amount.9312eb2641: Close
+[0m16:04:47.383483 [info ] [Thread-2 (]: 13 of 15 PASS not_null_stg_yellow_taxi_trips_total_amount ...................... [[32mPASS[0m in 0.76s]
+[0m16:04:47.384067 [debug] [Thread-2 (]: Finished running node test.nyc_taxi.not_null_stg_yellow_taxi_trips_total_amount.9312eb2641
+[0m16:04:47.553314 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.590 seconds
+[0m16:04:47.554138 [debug] [Thread-1 (]: On test.nyc_taxi.not_null_stg_yellow_taxi_trips_trip_distance.d793adaf62: ROLLBACK
+[0m16:04:47.554429 [debug] [Thread-1 (]: On test.nyc_taxi.not_null_stg_yellow_taxi_trips_trip_distance.d793adaf62: Close
+[0m16:04:47.554772 [info ] [Thread-1 (]: 14 of 15 PASS not_null_stg_yellow_taxi_trips_trip_distance ..................... [[32mPASS[0m in 0.60s]
+[0m16:04:47.555032 [debug] [Thread-1 (]: Finished running node test.nyc_taxi.not_null_stg_yellow_taxi_trips_trip_distance.d793adaf62
+[0m16:04:47.555839 [debug] [MainThread]: On master: COMMIT
+[0m16:04:47.556020 [debug] [MainThread]: Using postgres connection "master"
+[0m16:04:47.556177 [debug] [MainThread]: On master: COMMIT
+[0m16:04:47.556324 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:04:47.558742 [debug] [MainThread]: SQL status: COMMIT in 0.002 seconds
+[0m16:04:47.558940 [debug] [MainThread]: On master: Close
+[0m16:04:47.559174 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:04:47.559347 [debug] [MainThread]: Connection 'test.nyc_taxi.not_null_stg_yellow_taxi_trips_trip_distance.d793adaf62' was properly closed.
+[0m16:04:47.559516 [debug] [MainThread]: Connection 'test.nyc_taxi.not_null_stg_yellow_taxi_trips_total_amount.9312eb2641' was properly closed.
+[0m16:04:47.559659 [debug] [MainThread]: Connection 'test.nyc_taxi.not_null_fct_yellow_taxi_trips_total_amount.97407db36e' was properly closed.
+[0m16:04:47.559824 [debug] [MainThread]: Connection 'test.nyc_taxi.unique_daily_trip_summary_trip_date.3a73c1ad42' was properly closed.
+[0m16:04:47.559991 [info ] [MainThread]: 
+[0m16:04:47.560158 [info ] [MainThread]: Finished running 15 data tests in 0 hours 0 minutes and 2.50 seconds (2.50s).
+[0m16:04:47.561035 [debug] [MainThread]: Command end result
+[0m16:04:47.575945 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/project/dbt/target/manifest.json
+[0m16:04:47.576970 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/project/dbt/target/semantic_manifest.json
+[0m16:04:47.577926 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/project/dbt/target/osi_document.json
+[0m16:04:47.581756 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/project/dbt/target/run_results.json
+[0m16:04:47.581913 [info ] [MainThread]: 
+[0m16:04:47.582074 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:04:47.582206 [info ] [MainThread]: 
+[0m16:04:47.582345 [info ] [MainThread]: Done. PASS=15 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=15
+[0m16:04:47.582811 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 2.8164513, "process_in_blocks": "1120", "process_kernel_time": 0.085733, "process_mem_max_rss": "137020", "process_out_blocks": "2431", "process_user_time": 1.452432}
+[0m16:04:47.583016 [debug] [MainThread]: Command `dbt test` succeeded at 16:04:47.582980 after 2.82 seconds
+[0m16:04:47.583172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa3511f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa30fcf80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa3134290>]}
+[0m16:04:47.583322 [debug] [MainThread]: Flushing usage events
+[0m16:04:47.963021 [debug] [MainThread]: An error was encountered while trying to flush usage events

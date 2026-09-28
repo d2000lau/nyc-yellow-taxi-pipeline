@@ -1,0 +1,6 @@
+pandas
+pyarrow
+python-dotenv
+psycopg2-binary
+SQLAlchemy<2.0
+dbt-postgres

@@ -1,0 +1,42 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: nyc_taxi_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: REDACTED_PASSWORD
+      POSTGRES_DB: taxi
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  airflow:
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    container_name: nyc_taxi_airflow
+    depends_on:
+      - postgres
+    environment:
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: taxi
+      DB_USER: postgres
+      DB_PASSWORD: REDACTED_PASSWORD
+
+    volumes:
+      - ./:/opt/airflow/project
+      - ./airflow/dags:/opt/airflow/dags
+
+    ports:
+      - "8080:8080"
+
+    command: standalone
+
+volumes:
+  postgres_data:
