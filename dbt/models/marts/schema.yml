@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: fct_yellow_taxi_trips
+    description: "Trip-level fact table for cleaned NYC yellow taxi trips."
+
+    columns:
+      - name: pickup_datetime
+        tests:
+          - not_null
+
+      - name: dropoff_datetime
+        tests:
+          - not_null
+
+      - name: trip_distance
+        tests:
+          - not_null
+
+      - name: total_amount
+        tests:
+          - not_null
+
+  - name: daily_trip_summary
+    description: "Daily aggregate of taxi trips."
+
+    columns:
+      - name: trip_date
+        tests:
+          - not_null
+          - unique
+
+      - name: trip_count
+        tests:
+          - not_null
+
+      - name: total_revenue
+        tests:
+          - not_null
