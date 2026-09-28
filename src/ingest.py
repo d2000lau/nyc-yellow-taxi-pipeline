@@ -136,6 +136,8 @@ def load_to_postgres(
 
     try:
         cursor = connection.cursor()
+        
+        cursor.execute("TRUNCATE TABLE raw.yellow_taxi_trips;")
 
         columns = ", ".join(df.columns)
 
